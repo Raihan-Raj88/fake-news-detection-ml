@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake News Detector</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(120deg, #1d2671, #c33764);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 420px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #1d2671;
+        }
+
+        p.subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1d2671;
+            color: white;
+            font-size: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .real {
+            background: #e7f8ee;
+            color: #1c7c4c;
+            border: 1px solid #1c7c4c;
+        }
+
+        .fake {
+            background: #fdeaea;
+            color: #b10000;
+            border: 1px solid #b10000;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Fake News Detector</h1>
+    <p class="subtitle">Machine Learning based news verification system</p>
+
+    <form method="POST">
+        <label>News Title</label>
+        <input type="text" name="title"
+               placeholder="Enter news title"
+               value="{{ title }}" required>
+
+        <label>News Description</label>
+        <textarea name="text" rows="5"
+                  placeholder="Enter detailed news description"
+                  required>{{ text }}</textarea>
+
+        <button type="submit">Analyze News</button>
+    </form>
+
+    {% if result %}
+        {% if "REAL" in result %}
+            <div class="result real">{{ result }}</div>
+        {% else %}
+            <div class="result fake">{{ result }}</div>
+        {% endif %}
+    {% endif %}
+
+    <footer>
+        Fake News Detection Project | ML & NLP
+    </footer>
+</div>
+
+</body>
+</html>
