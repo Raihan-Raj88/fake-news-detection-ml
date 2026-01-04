@@ -45,17 +45,19 @@ https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
 ---
 
 ## Project Structure
-fake-news-detection-ml
+```text
+fake-news-detection-ml/
 │
 ├── app.py
 ├── fake_news_model.py
 ├── requirements.txt
 ├── data/
-│ ├── Fake.csv
-│ └── True.csv
+│   ├── Fake.csv
+│   └── True.csv
 ├── templates/
-│ └── index.html
+│   └── index.html
 └── README.md
+```
 
 
 ---
