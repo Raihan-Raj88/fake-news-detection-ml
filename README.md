@@ -63,30 +63,45 @@ fake-news-detection-ml/
 ---
 
 ## How to Run the Project
+## How to Run the Project
+
 1. Clone the repository
-
+```bash
 git clone https://github.com/Raihan-Raj88/fake-news-detection-ml.git
+```
 
-## Install dependencies
+2. Install required dependencies
+```bash
 pip install -r requirements.txt
+```
 
-## Run the Flask application
-python app.
+3. Run the Flask application
+```bash
+python app.py
+```
 
-## Open your browser and visit
+4. Open your browser and visit
+```
 http://127.0.0.1:5000
+```
+
 
 ## Output
-The system predicts whether the given news is FAKE or REAL
-Results are displayed on the web interface
+- The system predicts whether the given news is **FAKE** or **REAL**
+- Results are displayed on the web interface
+
+---
 
 ## Future Improvements
-Use advanced models like LSTM or BERT
-Add prediction confidence score
-Deploy the application online
+- Use advanced models like **LSTM** or **BERT**
+- Add prediction confidence score
+- Deploy the application online
+
+---
 
 ## Author
-Md. Raihan Sobhan Raj
-Department of Computer Science & Engineering
+**Md. Raihan Sobhan Raj**  
+Department of Computer Science & Engineering  
 Green University of Bangladesh
+
 
